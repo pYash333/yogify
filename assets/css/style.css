@@ -29,6 +29,18 @@ button:focus:not(:focus-visible){box-shadow:none;}
 .ul-list ul li:before{position: absolute;top: 0;left: 0;display: inline-flex;content: '';width: 21px;height: 21px;background:url(../images/check-solid.svg) no-repeat;margin-right: 12px;transition: 400ms;}
 .ul-list ul li + li{margin-top: 22px;}
 .custom-col{padding:0 26px;}
+
+.slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}.slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0}.slick-list:focus{outline:0}.slick-list.dragging{cursor:pointer;cursor:hand}.slick-slider .slick-list,.slick-slider .slick-track{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slick-track{position:relative;top:0;left:0;display:block;margin-left:auto;margin-right:auto}.slick-track:after,.slick-track:before{display:table;content:''}.slick-track:after{clear:both}.slick-loading .slick-track{visibility:hidden}.slick-slide{display:none;float:left;height:100%;min-height:1px}[dir=rtl] .slick-slide{float:right}.slick-slide img{display:block}.slick-slide.slick-loading img{display:none}.slick-slide.dragging img{pointer-events:none}.slick-initialized .slick-slide{display:block}.slick-loading .slick-slide{visibility:hidden}.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}.slick-arrow.slick-hidden{display:none}
+/* Slick css */
+.slick-slider .slick-arrow{background:url(../images/arrow.svg) no-repeat center; border:none; z-index:5; position:absolute; top:50%; transform: translateY(-50%); left:0; width:35px; height:63px; font-size:0px; color:#fff; cursor:pointer;}
+.slick-slider .slick-arrow.slick-prev{left: -130px;}
+.slick-slider .slick-arrow.slick-next{left:auto; right: -130px;transform:rotate(180deg) translateY(50%);}
+
+.slick-slider .slick-dots{text-align:center; padding:0; margin:20px 0 0 0;position: absolute;bottom: -60px;left: 50%;transform: translateX(-50%);}
+.slick-slider .slick-dots li{display:inline-block; margin: 0 3px;}
+.slick-slider .slick-dots li button{width:16px; height:16px; border-radius:100%; background: #dadada; border: 2px solid #dadada; padding:0; text-indent:-9999px; cursor:pointer;} 
+.slick-slider .slick-dots li.slick-active button{background: var(--secondary-color);border-color: var(--secondary-color);}
+
 /* header */
 header.header .navbar{padding:30px 0;background-color:var(--white-color);box-shadow:0 4px 8px 0 rgba(0,0,0,0.5);}
 header.header .navbar .navbar-brand{padding:0;max-width:106px;}
@@ -92,12 +104,45 @@ header.header .navbar-nav .nav-item .nav-link.active{font-weight:700;color: var(
 .pricing-section .pricing-card .btn-wrapper .btn-primary{transition: 400ms;}
 .pricing-section .pricing-card:hover .btn-wrapper .btn-primary{background-color: var(--white-color);color: var(--primary-color);}
 
-@media(max-width:1199px){
+.testimonial-section{background-color: var(--gray-color);padding: 80px 0 140px;}
+.testimonial-section .testimonial-slider-wrapper {max-width: 1024px;margin: 134px auto 0;position: relative;border-radius: 30px;}
+.testimonial-section .testimonial-slider-wrapper::before{content: '';position: absolute;top: -50px;left: -50px;background: url(../images/quote.svg) no-repeat center;display: inline-block;width: 132px;height: 96px;z-index: 1;}
+.testimonial-section .testimonial-slider-wrapper::after{content: '';position: absolute;bottom: -50px;right: -50px;transform: rotate(180deg);background: url(../images/quote.svg) no-repeat center;display: inline-block;width: 132px;height: 96px;z-index: 1;}
+.testimonial-section .testimonial-slider-wrapper .testimonial-slider {z-index: 10;padding: 50px 60px;background: #fff;border-radius: 30px;}
+.testimonial-section .testimonial-card .card-left .image {width: 190px;height: 190px;border-radius: 50%;overflow: hidden;}
+.testimonial-section .testimonial-card .card-left .image img {width: 100%;height: 100%;object-fit: cover;object-position: center;}
+.testimonial-section .testimonial-card {display: flex;align-items: center;}
+.testimonial-section .testimonial-card .card-right {margin-left: 54px;}
+.testimonial-section .testimonial-card .card-right .rating {margin-top: 20px;display: flex;gap: 8px;}
+.testimonial-section .testimonial-card .card-right .rating span.active{filter: brightness(0) saturate(100%) invert(53%) sepia(50%) saturate(1355%) hue-rotate(324deg) brightness(102%) contrast(103%);}
+.testimonial-section .testimonial-card .card-right .name {margin-top: 5px;font-weight: 700;font-size: 16px;line-height: 135%;}
+
+.blog-section{padding: 90px 0;}
+.blog-section .blog-inner{margin-top: 90px;}
+.blog-section .blog-inner .btn-wrapper{margin-top: 90px;}
+.blog-section .row {margin: 0 -26px;}
+.blog-section .blog-card .card-img {width: 100%;height: 320px;}
+.blog-section .blog-card .card-img img {width: 100%;height: 100%;object-fit: cover;object-position: center;}
+.blog-section .blog-card .card-body .subtitle {font-size: 12px;font-weight: 500;color: #524F4F;}
+.blog-section .blog-card .card-body h5 {margin:0;font-size: 18px;line-height: 135%;font-weight: 500;color: var(--secondary-color);}
+.blog-section .blog-card .card-body .content {margin-top: 5px;font-size: 12px;line-height: 135%;}
+.blog-section .blog-card .card-bottom {margin-top: 20px;display: flex;align-items: center;gap: 20px;}
+.blog-section .blog-card .card-bottom .blogger-img {width: 36px;height: 36px;border-radius: 50%;}
+.blog-section .blog-card .card-bottom .name {font-size: 12px;line-height: 135%;font-weight: 500;}
+.blog-section .blog-card .card-bottom .date {font-size: 12px;line-height: 135%;margin-top: 4px;}
+.blog-section .blog-card .card-description {padding: 25px 16px;box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);border-radius: 0 0 15px 15px;}
+
+
+
+@media (max-width: 1199.98px){
     .font-25{font-size:20px;}
     .btn.btn-primary{font-size:20px;}
+    .testimonial-section .testimonial-slider-wrapper {max-width: calc(100% - 200px);}
+    .testimonial-section .slick-slider .slick-arrow.slick-prev {left: -50px;}
+    .testimonial-section .slick-slider .slick-arrow.slick-next {right: -50px;}
 }
 
-@media(max-width:991px){
+@media (max-width: 991.98px){
     body{font-size:16px;line-height:24px;}
     h1{font-size:60px;}
     .font-25{font-size:18px;}
@@ -107,7 +152,7 @@ header.header .navbar-nav .nav-item .nav-link.active{font-weight:700;color: var(
     header.header .navbar{padding:15px 0;}
     header.header .navbar .navbar-collapse{position:fixed;top:82px;left:0;background:#fff;width:100%;padding:0 0 10px 0;border-top:1px solid var(--secondary-color);}
     header.header .navbar-nav .nav-item .nav-link{padding:8px 12px;}
-    header.header .navbar-nav .nav-item+.nav-item .nav-link{margin:0;}
+    header.header .navbar-nav .nav-item + .nav-item .nav-link{margin:0;}
     
     .hero-section{height:600px;}
 
@@ -125,13 +170,23 @@ header.header .navbar-nav .nav-item .nav-link.active{font-weight:700;color: var(
     .about-section .right-content .content{margin:20px 0;}
 
     .teachers-section{padding:35px 0;}
-    /* .teachers-section .row .custom-col{padding:0 12px;} */
     .teachers-section .row{margin:40px -12px 0;}
     .teachers-section .row .teacher-card{margin-bottom:30px;}
     .pricing-section .row{margin:0 -12px;}
+    
+
+    .testimonial-section .testimonial-slider-wrapper .testimonial-slider {padding: 40px 20px;}
+    .testimonial-section .testimonial-card .card-right {margin-left: 20px;}
+    .testimonial-section .testimonial-card .card-left .image {width: 100px;height: 100px;}
+    .blog-section .row {margin: 0 -12px;}
+    .blog-section .blog-card {margin-bottom: 40px;}
+    .blog-section .blog-inner .btn-wrapper {margin-top: 50px;}
+
 }
 
-@media(max-width:767px){
+
+
+@media (max-width: 767.98px){
     h1{font-size:48px;}
     h2{font-size:32px;}
     h3{font-size:24px;}
@@ -143,20 +198,34 @@ header.header .navbar-nav .nav-item .nav-link.active{font-weight:700;color: var(
     .membership-benifits{padding:30px 0;}
     .membership-benifits .membership-cards-wrapper{margin-top:40px;}
     .membership-benifits .membership-card .icon img{max-height:60px;}
-
     .classes-section{padding:30px 0;}
     .classes-section .classes-card-wrapper{margin-top:40px;}
     .classes-section .classes-card h4{bottom: 28px;}
-
     .teachers-section .row .teacher-card .card-img img{height:350px;}
-    
+    .testimonial-section {padding: 40px 0 100px;}
+    .testimonial-section .testimonial-slider-wrapper {margin-top: 90px;}
+    .testimonial-section .slick-slider .slick-arrow.slick-prev {display: none;}
+    .testimonial-section .slick-slider .slick-arrow.slick-next {display: none;}
+    .testimonial-section .testimonial-slider-wrapper {max-width: calc(100% - 50px);}
+    .testimonial-section .testimonial-slider-wrapper::before {width: 70px;background-size: contain;left: -20px;}
+    .testimonial-section .testimonial-slider-wrapper::after {width: 70px;background-size: contain;right: -20px;}
     .pricing-section .cards-wrapper {margin-top: 50px;}
     .pricing-section {padding: 80px 0 40px;}
+
+    
 }
 
-@media(max-width:575px){
+@media (max-width: 575.98px){
     .hero-section{height:450px;}
     .membership-benifits .membership-card{max-width: 320px; margin: 0 auto 20px;}
     .classes-section .classes-card{max-width: 320px; margin: 0 auto 20px;}
     .pricing-section .cards-wrapper .pricing-card {max-width: 320px;margin: 0 auto 40px;padding: 34px 17px;}
+    .testimonial-section .testimonial-slider-wrapper {max-width: 100%;}
+    .testimonial-section .testimonial-card {flex-direction: column;align-items: flex-start;}
+    .testimonial-section .testimonial-card .card-right {margin-left: 0;margin-top: 20px;}
+    .testimonial-section .testimonial-slider-wrapper::before {left: 20px;}
+    .testimonial-section .testimonial-slider-wrapper::after {right: 20px;}
+    .blog-section .blog-card {max-width: 320px;margin: 0 auto 40px;}
+    .blog-section .blog-inner {margin-top: 50px;}
+    .blog-section .blog-inner .btn-wrapper {margin-top: 0;}
 }

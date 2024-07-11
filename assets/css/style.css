@@ -173,12 +173,14 @@ header.header .navbar-nav .nav-item .nav-link.active{font-weight:700;color: var(
 .footer .contact-list li a{color: var(--white-color);text-decoration: none;transition: 400ms;}
 .footer .contact-list li a:hover{color: var(--secondary-color);}
 
-@media (max-width: 1199.98px){
-    .font-25{font-size:20px;}
-    .btn.btn-primary{font-size:20px;}
+@media (max-width: 1366px){
     .testimonial-section .testimonial-slider-wrapper {max-width: calc(100% - 200px);}
     .testimonial-section .slick-slider .slick-arrow.slick-prev {left: -50px;}
     .testimonial-section .slick-slider .slick-arrow.slick-next {right: -50px;}
+}
+@media (max-width: 1199.98px){
+    .font-25{font-size:20px;}
+    .btn.btn-primary{font-size:20px;}
     .footer .left {max-width: 100%;}
     .footer .center,.footer .right {margin-top: 40px;}
 }
